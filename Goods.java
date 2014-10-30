@@ -1,6 +1,6 @@
 Package Koebmand;
 
-public Class Goods
+public Class Goods implements Serializable
 {
   private int ID;
   private String name;
