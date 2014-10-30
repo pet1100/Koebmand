@@ -1,5 +1,8 @@
 Package Koebmand;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class Receipt
 {
   private int ID;
@@ -7,6 +10,7 @@ public class Receipt
   private Goods newGoods;
   private boolean close; //If close is true, print bon.
   private String fileName = "Bon";
+  String timeStamp = new SimpleDateFormat("HH:mm dd/MM-yyyy ").format(Calendar.getInstance().getTime());
   
   public void addGoods()
   {
@@ -20,7 +24,7 @@ public class Receipt
   
   public void close()
   {
-    
+    System.out.println(timeStamp);
   }
   
    private ArrayList<Goods> loadStorage()
