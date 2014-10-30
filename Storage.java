@@ -11,7 +11,7 @@ public class Storage
   	allGoods = loadStorage();
   }
   
-  private loadStorage()
+  private ArrayList<Goods> loadStorage()
   {
     ArrayList<Goods> goodsList = new ArrayList<Goods>();
 		try {
@@ -34,7 +34,7 @@ public class Storage
 		return goodsList;
   }
   
-  private saveStorage()
+  private void saveStorage(ArrayList<Goods> storageList)
   {
     FileOutputStream fileOut = null;
 		ObjectOutputStream out = null;
@@ -44,7 +44,7 @@ public class Storage
 			fileOut = new FileOutputStream(filename, false);
 			out = new ObjectOutputStream(fileOut);
 
-			out.writeObject(movies);
+			out.writeObject(storageList);
 			out.close();
 			fileOut.close();
 			System.out.println("Succes");
