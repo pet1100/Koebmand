@@ -4,9 +4,11 @@ public class Storage
 {
 
   String filename = "StorageData";
+  ArrayList<Goods> allGoods = new ArrayList<Goods>();
   
   Storage()
   {
+  	allGoods = loadStorage();
   }
   
   private loadStorage()
