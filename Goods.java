@@ -1,5 +1,7 @@
 Package Koebmand;
 
+import java.io.Serializable;
+
 public Class Goods implements Serializable
 {
   private int ID;
