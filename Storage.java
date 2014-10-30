@@ -11,6 +11,11 @@ public class Storage
   	allGoods = loadStorage();
   }
   
+  
+  private ArrayList<Goods> getList()
+  {
+  	return ArrayList<Good>;
+  }
   private ArrayList<Goods> loadStorage()
   {
     ArrayList<Goods> goodsList = new ArrayList<Goods>();
