@@ -1,16 +1,33 @@
 public class GUIReceipt
 {
-    public GUIReceipt
-    {
-    
-    }
-    
-    public void makeGUI()
-    {
-      JFrame myFrame = new JFrame("Receipt");
-      myFrame.setSize(500,500);
-      myFrame.setVisible(true);
-      myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+  private JFrame jf = new JFrame();
+  private JTable jt = new JTabel();
+  
+  public GUIReceipt
+  {
+  	
+  }
+  
+  public void makeGUI()
+  {		
+  		String[] columName = { "ID", "Item", "Quantity", "Price" };
+  		String[] dataLine = new String[]();
+  		Object[][] data = new Object[][];
+  		storList.addAll(stored.getList());
+  		for(Goods st : getReceipt())
+  		{
+  			dataLine.removeAll();
+  			dataLine.add(st.getID().toString());
+  			dataLine.add(st.getName);
+  			dataLine.add(st.getQuantity().toString());
+  			dataLine.add((st.getQuantity()+st.getPrice()).toString());
+  			data.add(dataLine);
+  		}
+  		tf.add(data);
+  		jf.add(tf);
+		jf.setVisible(true);
+		jf.setSize(500, 500);
+		jf.setResizable(false);    
+ }
     
 }
