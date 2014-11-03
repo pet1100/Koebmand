@@ -64,9 +64,7 @@ public class GUIStorage
   	addX.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	int number;
-            	number = JOptionPane.showInputDialog("Now tell me.");
-            	store.removeMoreQuantity(number);
+            	makeANew();
             }
         });
         
@@ -75,5 +73,11 @@ public class GUIStorage
         jl.add(addNew, BorderLayout.CENTER);
         
         return jl;
+  }
+  
+  //Add a new item to the storage.
+  private void makeANew()
+  {
+  	storList.add(new Goods((storList.size() + 1), name, price, quantity));
   }
 }
