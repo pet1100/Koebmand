@@ -4,18 +4,24 @@ import java.io.Serializable;
 
 public Class Goods implements Serializable
 {
-  private int ID;
+  private int ID = 0;
   private String name;
   private int price;
   private int quantity;
  
-  public Goods(int ID, String name, int price)
+  public Goods(String name, int price)
   {
+    
+    setId();
     this.ID = ID;
     this.name = name;
     this.price = price;
   }
-  
+  public void setId ()
+  {
+    ID += 1;
+    
+  }
   public int getQuantity()
   {
     return quantity;
