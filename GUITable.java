@@ -1,10 +1,11 @@
 package Koebman;
 
+// DW - ON the port
 // Imports
 import java.awt.*;
 import javax.swing.*;
 
-public class SimpleTableExample
+public class GUITable
         extends 	JFrame
 {
     // Instance attributes used in this example
@@ -13,7 +14,7 @@ public class SimpleTableExample
     private	JScrollPane scrollPane;
 
     // Constructor of main frame
-    public SimpleTableExample()
+    public GUITable()
     {
         // Set the frame characteristics
         setTitle( "Simple Table Application" );
@@ -49,9 +50,8 @@ public class SimpleTableExample
     public static void main( String args[] )
     {
         // Create an instance of the test application
-        SimpleTableExample mainFrame	= new SimpleTableExample();
+        GUITable mainFrame	= new GUITable();
         mainFrame.setVisible( true );
     }
-    
-}
 
+}
