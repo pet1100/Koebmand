@@ -9,13 +9,12 @@ public Class Goods implements Serializable
   private int price;
   private int quantity;
  
-  public Goods(int ID, String name, int price)
+  public Goods(int ID, String name, int price, int quantity)
   {
-    
-    
     this.ID = ID;
     this.name = name;
     this.price = price;
+    this.quantity = quantity;
   }
   public int getQuantity()
   {
