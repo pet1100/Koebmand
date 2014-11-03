@@ -25,8 +25,10 @@ public class Storage
 
 			try {
 				goodsList = (ArrayList<Goods>) in.readObject();
+				System.out.println ("Succes");
 			}
 			catch (Exception e) {
+				System.out.println("Failed!");
 
 			}
 
