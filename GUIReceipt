@@ -1,4 +1,7 @@
 public class GUIReceipt
 {
-
+  JFrame myFrame = new JFrame("Receipt");
+        myFrame.setSize(500,500);
+        myFrame.setVisible(true);
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 }
