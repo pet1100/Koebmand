@@ -26,8 +26,8 @@ public class GUIStorage
   			dataLine.add(st.getQuantity().toString());
   			data.add(dataLine);
   		}
-  		tf.add(data);
-  		jf.add(tf, BorderLayout.CENTER);
+  		jt.add(data);
+  		jf.add(jt, BorderLayout.CENTER);
   		jf.add(button(), BorderLayout.SOUTH);
 		jf.setVisible(true);
 		jf.setSize(500, 500);
@@ -42,7 +42,7 @@ public class GUIStorage
             @Override
             public void actionPerformed(ActionEvent e) {
             	int number;
-            	number = JOptionPane.showInputDialog("What is your name");
+            	number = JOptionPane.showInputDialog("How much will you add?");
             	store.addQuantity(number);
             }
         });
@@ -52,7 +52,17 @@ public class GUIStorage
             @Override
             public void actionPerformed(ActionEvent e) {
             	int number;
-            	number = JOptionPane.showInputDialog("What is your name");
+            	number = JOptionPane.showInputDialog("How much will you remove?");
+            	store.removeMoreQuantity(number);
+            }
+        });
+        
+              JButton addNew = new JButton("Add new item");
+  	addX.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	int number;
+            	number = JOptionPane.showInputDialog("Now tell me.");
             	store.removeMoreQuantity(number);
             }
         });
