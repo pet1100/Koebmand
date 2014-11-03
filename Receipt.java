@@ -12,9 +12,11 @@ public class Receipt
   private String fileName = "Bon";
   String timeStamp = new SimpleDateFormat("HH:mm dd/MM-yyyy ").format(Calendar.getInstance().getTime());
   private Goods vare = new Goods();
+  private ArrayList<Goods> receipt = new ArrayList<Goods> ();
   
   
   public void addGoods()
+  
   {
   vare.addQuantity(1);
   }
@@ -28,6 +30,12 @@ public class Receipt
   {
     System.out.println(timeStamp);
   }
+
+  public ArrayList<Goods> getReceipt()
+  {
+  	return receipt;
+  }
+
   
    private ArrayList<Goods> loadStorage()
   {
