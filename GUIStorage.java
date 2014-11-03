@@ -34,8 +34,10 @@ public class GUIStorage
 		jf.setResizable(false);    
   }
   
+  //Add buttons to add, remove and make a new item.
   private JLabel button()
   {
+  	JLabel jl = new JLabel();
   	Storage store = new Storage();
   	JButton addX = new JButton("Add x");
   	addX.addActionListener(new ActionListener() {
@@ -47,7 +49,8 @@ public class GUIStorage
             }
         });
         
-         JButton addX = new JButton("Remove x");
+        
+         JButton removeX = new JButton("Remove x");
   	addX.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -67,6 +70,10 @@ public class GUIStorage
             }
         });
         
-        this.add(addX, BorderLayout.WEST);
+        jl.add(addX, BorderLayout.WEST);
+        jl.add(removeX, BorderLayout.EAST);
+        jl.add(addNew, BorderLayout.CENTER);
+        
+        return jl;
   }
 }
