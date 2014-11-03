@@ -31,6 +31,11 @@ public Class Goods implements Serializable
     quantity--;
   }
   
+  public void remobeMoreQuantity(int removeQuantity)
+  {
+    quantity -= removeQuantity;
+  }
+  
   public int getID()
   {
     return ID;
