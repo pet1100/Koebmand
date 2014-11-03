@@ -11,15 +11,17 @@ public class Receipt
   private boolean close; //If close is true, print bon.
   private String fileName = "Bon";
   String timeStamp = new SimpleDateFormat("HH:mm dd/MM-yyyy ").format(Calendar.getInstance().getTime());
+  private Goods vare = new Goods();
+  
   
   public void addGoods()
   {
-  
+  vare.addQuantity(1);
   }
   
   public void removeGoods()
   {
-  
+  vare.removeQuantity();
   }
   
   public void close()
