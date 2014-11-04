@@ -1,4 +1,4 @@
-package Koebmand
+package Koebmand;
 
 public class GUIStorage
 {
