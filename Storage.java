@@ -32,7 +32,7 @@ public class Storage
   
   private ArrayList<Goods> getList()
   {
-  	return ArrayList<Good>;
+  	return allGoods;
   }
   private ArrayList<Goods> loadStorage()
   {
