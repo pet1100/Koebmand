@@ -2,8 +2,9 @@ public class GUIReceipt
 {
   private JFrame jf = new JFrame();
   private JTable jt = new JTabel();
+  private Receipt rt = new Receipt();
   
-  public GUIReceipt
+  public GUIReceipt()
   {
   	
   }
@@ -14,7 +15,7 @@ public class GUIReceipt
   		String[] dataLine = new String[]();
   		Object[][] data = new Object[][];
   		storList.addAll(stored.getList());
-  		for(Goods st : getReceipt()) //Adds text to StringArray
+  		for(Goods st : rt.getReceipt()) //Adds text to StringArray
   		{
   			dataLine.removeAll();
   			dataLine.add(st.getID().toString());
