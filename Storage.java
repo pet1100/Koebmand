@@ -11,6 +11,22 @@ public class Storage
   	allGoods = loadStorage();
   }
   
+  //Check and remove an item from the goods list, and return true if done.
+  public boolean checkAndRemove(Goods g)
+  {
+  	boolean done = false;
+  	for(Goods gn : allGoods)
+  	{
+  		if(gn.getID == g.getID)
+  		{
+  			gn.remove();
+  			done = true;
+  			break;
+  		}
+  	}
+  	return done;
+  }
+  
   
   private ArrayList<Goods> getList()
   {
