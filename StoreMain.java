@@ -1,6 +1,6 @@
 package Koebmand
 
-public class KoebmandMain
+public class StoreMain
 {
   public static void main(String[] Args)
   {
