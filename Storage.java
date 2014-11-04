@@ -19,6 +19,18 @@ public class Storage
   	allGoods = loadStorage();
   }
   
+  public void addGoods(int ID, int moreGoods)
+  {
+  	for(Goods g : allGoods)
+  	{
+  		if(g.getID() == ID)
+  		{
+  			g.addQuantity(moreGoods);
+  			break;
+  		}
+  	}
+  }
+  
   //Check and remove an item from the goods list, and return true if done.
   public boolean checkAndRemove(Goods g)
   {
