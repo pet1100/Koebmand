@@ -52,6 +52,25 @@ public class Storage
   {
   	return allGoods;
   }
+  
+  //Updates the ID for all goods.
+  private void updateID()
+  {
+  	int ID = 1;
+  	for(Goods g : allGoods)
+  	{
+  		g.setID(ID);
+  		ID++;
+  	}
+  }
+  
+  //Add a new item to the store
+  private void makeGoods(String Name, int Price, int quantity)
+  {
+  	updateID();
+  	allGoods.add(new Goods((allGods.size()+1) ,Name ,Price ,quantity);
+  }
+  
   private ArrayList<Goods> loadStorage()
   {
     ArrayList<Goods> goodsList = new ArrayList<Goods>();
