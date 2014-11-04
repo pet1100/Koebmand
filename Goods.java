@@ -16,22 +16,28 @@ public Class Goods implements Serializable
     this.price = price;
     this.quantity = quantity;
   }
+  
+  public Goods()
+  {
+    
+  }
+  
   public int getQuantity()
   {
     return quantity;
   }
   
-  public void add(int addQuantity)
+  public void addGoods(int addQuantity)
   {
     quantity += addQuantity;
   }
   
-  public void remove()
+  public void removeGoods()
   {
     quantity--;
   }
   
-  public void remove(int removeQuantity)
+  public void removeGoods(int removeQuantity)
   {
     quantity -= removeQuantity;
   }
