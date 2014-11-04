@@ -21,17 +21,17 @@ public Class Goods implements Serializable
     return quantity;
   }
   
-  public void addQuantity(int addQuantity)
+  public void add(int addQuantity)
   {
     quantity += addQuantity;
   }
   
-  public void removeQuantity()
+  public void remove()
   {
     quantity--;
   }
   
-  public void remobeMoreQuantity(int removeQuantity)
+  public void remove(int removeQuantity)
   {
     quantity -= removeQuantity;
   }
