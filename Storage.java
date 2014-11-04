@@ -1,5 +1,7 @@
 Package Koebmand;
 
+import java.util.ArrayList;
+
 public class Storage
 {
 
@@ -17,7 +19,7 @@ public class Storage
   	boolean done = false;
   	for(Goods gn : allGoods)
   	{
-  		if(gn.getID == g.getID)
+  		if(gn.getID() == g.getID())
   		{
   			gn.remove();
   			done = true;
