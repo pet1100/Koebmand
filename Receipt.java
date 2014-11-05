@@ -26,6 +26,12 @@ public class Receipt
   
   public void close()
   {
+  	int totalCost = 0;
+  	for(Goods g : receipt)
+  	{
+  		totalCost += g.getPrice();
+  	}
+ 	System.out.println("You have to pay " + totalCost());
     System.out.println(timeStamp);
   }
 
