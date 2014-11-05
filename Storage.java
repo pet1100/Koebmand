@@ -12,7 +12,7 @@ public class Storage
 {
 
   String filename = "StorageData";
-  ArrayList<Goods> allGoods = new ArrayList<Goods>();
+  ArrayList<Goods> allGoods = new ArrayList<>();
   
   Storage()
   {
@@ -25,14 +25,14 @@ public class Storage
   	{
   		if(g.getID() == ID)
   		{
-  			g.addQuantity(moreGoods);
+  			g.addGoods(moreGoods);
   			break;
   		}
   	}
   }
   
   //Check and remove an item from the goods list, and return true if done.
-  public boolean checkAndRemove(Goods g)
+  public boolean checkAndRemove(Goods g, int removeQuantity)
   {
   	boolean done = false;
   	for(Goods gn : allGoods)
