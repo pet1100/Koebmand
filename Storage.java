@@ -48,7 +48,7 @@ public class Storage
   }
   
   
-  private ArrayList<Goods> getList()
+  public ArrayList<Goods> getList()
   {
   	return allGoods;
   }
