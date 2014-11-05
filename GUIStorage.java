@@ -20,10 +20,10 @@ public class GUIStorage
   public void makeGUI()
   {		
   		String[] columName = { "ID", "Item", "Supply number" };
-  		String[] dataLine = new String[]();
-  		Object[][] data = new Object[][];
+  		String[] dataLine = new String[4];
+  		Object[][] data = new Object[4][];
   		storList.addAll(stored.getList());
-  		for(Storage st : storlist)
+  		for(Goods st : storList)
   		{
   			dataLine.removeAll();
   			dataLine.add(st.getID().toString());
