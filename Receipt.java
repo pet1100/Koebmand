@@ -32,7 +32,7 @@ public class Receipt
 
   public ArrayList<Goods> getReceipt()
   {
-  	return stoed.getList();
+  	return receipt;
   }
 
   
