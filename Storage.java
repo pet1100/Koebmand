@@ -1,4 +1,4 @@
-Package Koebmand;
+package Koebman;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -39,7 +39,7 @@ public class Storage
   	{
   		if(gn.getID() == g.getID())
   		{
-  			gn.remove();
+  			gn.removeGoods(1);;
   			done = true;
   			break;
   		}
@@ -68,7 +68,7 @@ public class Storage
   private void makeGoods(String Name, int Price, int quantity)
   {
   	updateID();
-  	allGoods.add(new Goods((allGods.size()+1) ,Name ,Price ,quantity);
+  	allGoods.add(new Goods((allGoods.size()+1) ,Name ,Price ,quantity));
   }
   
   private ArrayList<Goods> loadStorage()
