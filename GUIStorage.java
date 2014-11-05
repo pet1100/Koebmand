@@ -117,7 +117,7 @@ public class GUIStorage
   }
   
   //Add a new item to the storage.
-  private void makeANew()
+  private void makeANew(String name, int price, int qauantity)
   {
   	storList.add(new Goods((storList.size() + 1), name, price, quantity));
   }
