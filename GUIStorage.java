@@ -16,45 +16,49 @@ public class GUIStorage
   private ArrayList<Goods> storList = new ArrayList<>(); 
   private Storage stored = new Storage();
   
-  public GUIStorage()
-  {
-  	
-  }
+  public class GUIStorage extends JFrame
+{
+  
+  private JFrame jf = new JFrame();
+  private	JPanel		topPanel;
+  private	JTable		table;
+  private	JScrollPane scrollPane;
+  private ArrayList<Goods> storList = new ArrayList<>(); 
+  private Storage stored = new Storage();
+  
   
   //Makes the GUI for storage.
-  public void makeGUI()
-  {		
-  		 // Set the frame characteristics
-      this.setTitle( "Simple Table Application" );
-      this.setSize( 300, 200 );
-      this.setBackground( Color.GRAY );
+  public void GUIStorage()
+  { // Instance attributes used in this example
+	        // Set the frame characteristics
+	        this.setTitle( "Simple Table Application" );
+	        this.setSize( 300, 200 );
+	        this.setBackground( Color.GRAY );
 
-      // Create a panel to hold all other components
-      topPanel = new JPanel();
-      topPanel.setLayout( new BorderLayout() );
-      getContentPane().add( topPanel );
+	        // Create a panel to hold all other components
+	        topPanel = new JPanel();
+	        topPanel.setLayout( new BorderLayout() );
+	        this.getContentPane().add( topPanel );
 
-      // Create columns names
-      String columnNames[] = { "ID", "Item", "Supply number"  };
+	        // Create columns names
+	        String columnNames[] = { "Peter 1", "Jannik 2", "Markus 3" };
 
-      // Create some data
-      String dataValues[][] =
-              {
-              };
-      
-      for (Goods g : storList) {
-		dataValues[1][g.getID()] = "" + g.getID(); 
-		dataValues[2][g.getID()] = g.getName(); 
-		dataValues[3][g.getID()] = "" + g.getQuantity();
-	}
+	        // Create some data
+	        String dataValues[][] =
+	                {
+	                        { "12", "234", "67" },
+	                        { "-123", "43", "853" },
+	                        { "93", "89.2", "109" },
+	                        { "279", "9033", "3092" }
+	                };
 
-      // Create a new table instance
-      table = new JTable( dataValues, columnNames );
+	        // Create a new table instance
+	        table = new JTable( dataValues, columnNames );
 
-      // Add the table to a scrolling pane
-      scrollPane = new JScrollPane( table );
-      topPanel.add( scrollPane, BorderLayout.CENTER );
-  }
+	        // Add the table to a scrolling pane
+	        scrollPane = new JScrollPane( table );
+	        topPanel.add( scrollPane, BorderLayout.CENTER );
+	    }
   
   //Add buttons to add, remove and make a new item.
   private JLabel button()
@@ -77,7 +81,7 @@ public class GUIStorage
 				}
             	temp = JOptionPane.showInputDialog("How much will you add?");
             	int number = Integer.parseInt(temp);
-            	store.addQuantity(good ,number);
+//            	store.addQuantity(good ,number);
             }
         });
         
@@ -117,7 +121,7 @@ public class GUIStorage
   }
   
   //Add a new item to the storage.
-  private void makeANew(String name, int price, int qauantity)
+  private void makeANew(String name, int price, int quantity)
   {
   	storList.add(new Goods((storList.size() + 1), name, price, quantity));
   }
