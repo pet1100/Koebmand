@@ -12,6 +12,7 @@ public class GUIStorage
   	
   }
   
+  //Makes the GUI for storage.
   public void makeGUI()
   {		
   		String[] columName = { "ID", "Item", "Supply number" };
