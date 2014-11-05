@@ -2,7 +2,7 @@ Package Koebmand;
 
 import java.io.Serializable;
 
-public Class Goods implements Serializable
+public class Goods implements Serializable
 {
   private int ID = 0;
   private String name;
