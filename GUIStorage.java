@@ -19,24 +19,36 @@ public class GUIStorage
   //Makes the GUI for storage.
   public void makeGUI()
   {		
-  		String[] columName = { "ID", "Item", "Supply number" };
-  		String[] dataLine = new String[4];
-  		Object[][] data = new Object[4][];
-  		storList.addAll(stored.getList());
-  		for(Goods st : storList)
-  		{
-  			dataLine.removeAll();
-  			dataLine.add(st.getID().toString());
-  			dataLine.add(st.getName);
-  			dataLine.add(st.getQuantity().toString());
-  			data.add(dataLine);
-  		}
-  		jt.add(data);
-  		jf.add(jt, BorderLayout.CENTER);
-  		jf.add(button(), BorderLayout.SOUTH);
-		jf.setVisible(true);
-		jf.setSize(500, 500);
-		jf.setResizable(false);    
+  		 // Set the frame characteristics
+      this.setTitle( "Simple Table Application" );
+      this.setSize( 300, 200 );
+      this.setBackground( Color.GRAY );
+
+      // Create a panel to hold all other components
+      topPanel = new JPanel();
+      topPanel.setLayout( new BorderLayout() );
+      getContentPane().add( topPanel );
+
+      // Create columns names
+      String columnNames[] = { "ID", "Item", "Supply number"  };
+
+      // Create some data
+      String dataValues[][] =
+              {
+              };
+      
+      for (Goods g : storList) {
+		dataValues[1][g.getID()] = "" + g.getID(); 
+		dataValues[2][g.getID()] = g.getName(); 
+		dataValues[3][g.getID()] = "" + g.getQuantity();
+	}
+
+      // Create a new table instance
+      table = new JTable( dataValues, columnNames );
+
+      // Add the table to a scrolling pane
+      scrollPane = new JScrollPane( table );
+      topPanel.add( scrollPane, BorderLayout.CENTER );
   }
   
   //Add buttons to add, remove and make a new item.
