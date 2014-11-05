@@ -1,11 +1,14 @@
 package Koebmand;
 
+import javax.swing.JTable;
+import javax.swing.JFrame;
+
 public class GUIStorage
 {
   
   private JFrame jf = new JFrame();
-  private JTable jt = new JTabel();
-  private ArrayList<Storage> storList = new Arraylist<>(); 
+  private JTable jt = new JTable();
+  private ArrayList<Storage> storList = new ArrayList<>(); 
   
   public GUIStorage
   {
