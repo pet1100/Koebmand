@@ -30,16 +30,18 @@ import javax.swing.*;
 	        this.getContentPane().add( topPanel );
 
 	        // Create columns names
-	        String columnNames[] = { "Peter 1", "Jannik 2", "Markus 3" };
+	        String columnNames[] = { "ID", "Item", "Supply number"  };
 
 	        // Create some data
 	        String dataValues[][] =
-	                {
-	                        { "12", "234", "67" },
-	                        { "-123", "43", "853" },
-	                        { "93", "89.2", "109" },
-	                        { "279", "9033", "3092" }
-	                };
+	              {
+	              };
+	      storList.addAll(stored.getList());
+	      for (Goods g : storList) {
+			dataValues[1][g.getID()] = "" + g.getID(); 
+			dataValues[2][g.getID()] = g.getName(); 
+			dataValues[3][g.getID()] = "" + g.getQuantity();
+		}
 
 	        // Create a new table instance
 	        table = new JTable( dataValues, columnNames );
