@@ -10,7 +10,9 @@ public class GUIStorage
 {
   
   private JFrame jf = new JFrame();
-  private JTable jt = new JTable();
+  private	JPanel		topPanel;
+  private	JTable		table;
+  private	JScrollPane scrollPane;
   private ArrayList<Goods> storList = new ArrayList<>(); 
   private Storage stored = new Storage();
   
