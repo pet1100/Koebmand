@@ -1,4 +1,4 @@
-package Koebmand;
+package koebmand;
 
 import java.awt.*;
 import java.util.*;
@@ -62,12 +62,22 @@ public class GUIStorage
   	JLabel jl = new JLabel();
   	Storage store = new Storage();
   	JButton addX = new JButton("Add x");
+  	
   	addX.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	int number;
-            	number = JOptionPane.showInputDialog("How much will you add?");
-            	store.addQuantity(number);
+            	String temp;
+            	Goods good;
+            	temp = JOptionPane.showInputDialog("What vil you add?");
+            	for (Goods g : storList) {
+					if(g.getName().equalsIgnoreCase(temp))
+					{
+						good = g;
+					}
+				}
+            	temp = JOptionPane.showInputDialog("How much will you add?");
+            	int number = Integer.parseInt(temp);
+            	store.addQuantity(good ,number);
             }
         });
         
@@ -76,9 +86,18 @@ public class GUIStorage
   	addX.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	int number;
-            	number = JOptionPane.showInputDialog("How much will you remove?");
-            	store.removeMoreQuantity(number);
+            	String temp;
+            	Goods good;
+            	temp = JOptionPane.showInputDialog("What vil you add?");
+            	for (Goods g : storList) {
+					if(g.getName().equalsIgnoreCase(temp))
+					{
+						good = g;
+					}
+				}
+            	temp = JOptionPane.showInputDialog("How much will you add?");
+            	int number = Integer.parseInt(temp);
+//            	store.addQuantity(good ,number);
             }
         });
         
@@ -86,7 +105,7 @@ public class GUIStorage
   	addX.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	makeANew();
+//            	makeANew();
             }
         });
         
