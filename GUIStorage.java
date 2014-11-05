@@ -5,17 +5,6 @@ import java.util.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
-public class GUIStorage
-{
-  
-  private JFrame jf = new JFrame();
-  private	JPanel		topPanel;
-  private	JTable		table;
-  private	JScrollPane scrollPane;
-  private ArrayList<Goods> storList = new ArrayList<>(); 
-  private Storage stored = new Storage();
-  
   public class GUIStorage extends JFrame
 {
   
