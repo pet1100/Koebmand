@@ -1,3 +1,5 @@
+package Koebmand;
+
 public class GUIReceipt
 {
   private JFrame jf = new JFrame();
