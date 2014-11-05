@@ -1,9 +1,12 @@
 package Koebmand;
 
+import javax.swing.JFrame;
+import javax.swing.JTable;
+
 public class GUIReceipt
 {
   private JFrame jf = new JFrame();
-  private JTable jt = new JTabel();
+  private JTable jt = new JTable();
   private Receipt rt = new Receipt();
   private Storage stored = new Storage();
   
