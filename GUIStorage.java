@@ -8,7 +8,8 @@ public class GUIStorage
   
   private JFrame jf = new JFrame();
   private JTable jt = new JTable();
-  private ArrayList<Storage> storList = new ArrayList<>(); 
+  private ArrayList<Goods> storList = new ArrayList<>(); 
+  private Storage stored = new Storage();
   
   public GUIStorage()
   {
