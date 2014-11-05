@@ -10,7 +10,7 @@ public class GUIStorage
   private JTable jt = new JTable();
   private ArrayList<Storage> storList = new ArrayList<>(); 
   
-  public GUIStorage
+  public GUIStorage()
   {
   	
   }
