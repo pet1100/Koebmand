@@ -17,7 +17,7 @@ import javax.swing.*;
   
   
   //Makes the GUI for storage.
-  public void GUIStorage()
+  public GUIStorage()
   { // Instance attributes used in this example
 	        // Set the frame characteristics
 	        this.setTitle( "Simple Table Application" );
