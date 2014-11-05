@@ -9,7 +9,7 @@ public class GUIReceipt
   	
   }
   
-  //Make the GUI.
+  //Make the GUI for receipt.
   public void makeGUI()
   {		
   		String[] columName = { "ID", "Item", "Quantity", "Price" };
