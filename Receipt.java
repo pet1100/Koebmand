@@ -50,7 +50,7 @@ public class Receipt
   {
     ArrayList<Goods> bonList = new ArrayList<Goods>();
 		try {
-			FileInputStream fileIn = new FileInputStream(filename);
+			FileInputStream fileIn = new FileInputStream(fileName);
 			ObjectInputStream in = new ObjectInputStream(fileIn);
 
 			try {
@@ -74,9 +74,9 @@ public class Receipt
     FileOutputStream fileOut = null;
 		ObjectOutputStream out = null;
 		try {
-			File bonFile = new File(filename);
+			File bonFile = new File(fileName);
 			bonFile.createNewFile();
-			fileOut = new FileOutputStream(filename, false);
+			fileOut = new FileOutputStream(fileName, false);
 			out = new ObjectOutputStream(fileOut);
 
 			out.writeObject(bonList);
